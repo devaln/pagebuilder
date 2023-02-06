@@ -1,13 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box;}
+
+.container {
+  position: relative;
+  width: 50%;
+  max-width: 300px;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5); /* Black see-through */
+  color: #f1f1f1;
+  width: 100%;
+  transition: .5s ease;
+  opacity:0;
+  color: white;
+  font-size: 20px;
+  padding: 20px;
+  text-align: center;
+}
+
+.container:hover .overlay {
+  opacity: 1;
+}
+</style>
+</head>
+<body>
+
 <div class="container">
-    <div class="flip-box">
-        <div class="flip-box-inner">
-          <div class="flip-box-front">
-            <img src="a.jpg" alt="Paris" style="width:300px;height:200px">
-          </div>
-          <div class="flip-box-back">
-            <h2>Paris</h2>
-            <p>What an amazing city</p>
-          </div>
-        </div>
-    </div>
+  <img src="img_avatar.png" alt="Avatar" class="image">
+  <div class="overlay"><h3>My Name is John</h3></div>
 </div>
+
+</body>
+</html>
